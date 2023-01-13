@@ -49,16 +49,16 @@
 // }
 
 import React, { Component } from 'react'
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import ctx from "./RouterContext";
 import matchPath from "./matchPath"
 
 export default class Router extends Component {
 
-    // static propTypes = {
-    //     history: PropTypes.object.isRequired,
-    //     children: PropTypes.node
-    // }
+    static propTypes = {
+        history: PropTypes.object.isRequired,
+        children: PropTypes.node
+    }
 
     state = {
         location: this.props.history.location
