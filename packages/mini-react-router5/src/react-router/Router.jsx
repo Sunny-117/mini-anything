@@ -74,7 +74,7 @@ export default class Router extends Component {
     }
 
     componentWillUnmount() {
-        this.unListen();//取消监听
+        this.unListen();
     }
 
 
