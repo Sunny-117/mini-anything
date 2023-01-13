@@ -55,6 +55,8 @@ React
 
 ✅ mini-redux-thunk
 
+✅ mini-redux-saga
+
 ## 上层框架
 
 ✅ mini-dva

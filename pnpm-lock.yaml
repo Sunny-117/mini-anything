@@ -126,6 +126,14 @@ importers:
       lodash: registry.npmmirror.com/lodash/4.17.21
       lodash-es: registry.npmmirror.com/lodash-es/4.17.21
 
+  packages/mini-redux-saga:
+    specifiers:
+      is-generator: ^1.0.3
+      is-promise: ^4.0.0
+    dependencies:
+      is-generator: registry.npmmirror.com/is-generator/1.0.3
+      is-promise: registry.npmmirror.com/is-promise/4.0.0
+
   packages/mini-webpack:
     specifiers:
       '@babel/core': ^7.7.7
@@ -12798,6 +12806,12 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       has-tostringtag: registry.npmmirror.com/has-tostringtag/1.0.0
+    dev: false
+
+  registry.npmmirror.com/is-generator/1.0.3:
+    resolution: {integrity: sha512-G56jBpbJeg7ds83HW1LuShNs8J73Fv3CPz/bmROHOHlnKkN8sWb9ujiagjmxxMUywftgq48HlBZELKKqFLk0oA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/is-generator/-/is-generator-1.0.3.tgz}
+    name: is-generator
+    version: 1.0.3
     dev: false
 
   registry.npmmirror.com/is-glob/2.0.1:
