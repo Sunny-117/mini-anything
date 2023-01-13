@@ -13,27 +13,6 @@
 
 ### 🏠 [Homepage](https://github.com/Sunny-117/mini-anything)
 
-### ✨ [Demo](https://sunny-117.github.io/mini-anything-docs/)
-
-## Install
-
-```sh
-npm install
-```
-
-## Run tests
-
-```sh
-npm test
-```
-
-## Author
-
-👤 **sunny-117**
-
-* Website: https://sunny-117.github.io/blog/
-* Github: [@sunny-117](https://github.com/sunny-117)
-
 
 # documentation
 
@@ -289,6 +268,13 @@ rollup plugin
 
 - Modern browsers
 - NodeJS
+
+## Author
+
+👤 **sunny-117**
+
+* Website: https://sunny-117.github.io/blog/
+* Github: [@sunny-117](https://github.com/sunny-117)
 
 
 
