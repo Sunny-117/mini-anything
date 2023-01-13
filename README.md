@@ -1,6 +1,10 @@
 # mini-anything
 
 
+# 文档地址
+
+WIP：https://sunny-117.github.io/mini-anything-docs/
+
 
 <h2>💼 repo</h2>
 <table>
@@ -160,3 +164,9 @@
 <p>
       未完待续
 </p>
+
+
+🖥 Environment Suppor
+
+- Modern browsers
+- NodeJS
