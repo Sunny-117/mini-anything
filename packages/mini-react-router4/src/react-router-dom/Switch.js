@@ -2,7 +2,11 @@ import React from 'react';
 
 import { Consumer } from './context';
 import pathToRegExp from 'path-to-regexp';
-// Switch的作用就是匹配一个组件
+/**
+ * Switch的作用就是匹配一个组件
+ * @param {*} props 
+ * @returns 
+ */
 export default function Switch(props) {
   return (<Consumer>
     {state => {

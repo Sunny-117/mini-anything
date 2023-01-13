@@ -1,38 +1,29 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Provider } from './context'
-export default class HashRouter extends Component {
-  constructor() {
-    super();
-    this.state = {
-      location: {
-        pathname: window.location.hash.slice(1) || '/'
-      }
-    }
-  }
-  componentDidMount() {
+export default function HashRouter(props) {
+  const [location, setLocation] = useState({
+    pathname: window.location.hash.slice(1) || '/'
+  })
+  useEffect(() => {
     // 默认hash没有时跳转到/
     window.location.hash = window.location.hash || '/';
     // 监听hash值变化 重新设置状态
     window.addEventListener('hashchange', () => {
-      this.setState({
-        location: {
-          ...this.state.location,
-          pathname: window.location.hash.slice(1) || '/'
-        }
+      setLocation({
+        ...location,
+        pathname: window.location.hash.slice(1) || '/'
       })
     });
-  }
-  render() {
-    let value = {
-      location: this.state.location,
-      history: {
-        push(to) {
-          window.location.hash = to;
-        }
+  }, [])
+  const value = {
+    location,
+    history: {
+      push(to) {
+        window.location.hash = to;
       }
     }
-    return (<Provider value={value}>
-      {this.props.children}
-    </Provider>)
   }
+  return (<Provider value={value} >
+    {props.children}
+  </Provider>)
 }
