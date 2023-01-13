@@ -1,4 +1,38 @@
-# mini-anything
+<h1 align="center">Welcome to mini-anything 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
+  <a href="https://sunny-117.github.io/mini-anything-docs/" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://opensource.org/licenses/MIT" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+</p>
+
+> 🚀 mini-anything 是一个集合了前端领域的各种迷你版本的库，方便前端学习者学习，探索前端源码。里面的库是原库的超级迷你版本，只包含原库的主流程，不包含边界case，所以建议仅学习使用，请勿用于生产环境
+
+### 🏠 [Homepage](https://github.com/Sunny-117/mini-anything)
+
+### ✨ [Demo](https://sunny-117.github.io/mini-anything-docs/)
+
+## Install
+
+```sh
+npm install
+```
+
+## Run tests
+
+```sh
+npm test
+```
+
+## Author
+
+👤 **sunny-117**
+
+* Website: https://sunny-117.github.io/blog/
+* Github: [@sunny-117](https://github.com/sunny-117)
 
 
 # documentation
@@ -255,3 +289,22 @@ rollup plugin
 
 - Modern browsers
 - NodeJS
+
+
+
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Sunny-117/mini-anything/issues). You can also take a look at the [contributing guide](https://github.com/Sunny-117/mini-anything/blob/main/CONTRIBUTING.md).
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+Copyright © 2023 [sunny-117](https://github.com/sunny-117).<br />
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
