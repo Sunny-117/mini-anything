@@ -4,7 +4,7 @@ import Peronal from './Peronal';
 import User from './User';
 import React from 'react'
 import { render } from 'react-dom';
-import { HashRouter as Router, Route, Link, Redirect, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Link, Redirect, Switch } from './react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css'
 function App() {
   return (<Router>
