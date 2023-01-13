@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to mini-anything 👋</h1>
+<h1 align="center">Welcome to mini-anything[**MVP**] 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
   <a href="https://sunny-117.github.io/mini-anything-docs/" target="_blank">
@@ -20,14 +20,11 @@ WIP：https://sunny-117.github.io/mini-anything-docs/
 
 注意：
 
-**尽快跑通 MVP 版本，代码架构和工程化设施后续补充**
+**跑通 MVP 版本，代码架构和工程化设施后续补充**
 
 TODO
 
 - [ ] 打包，发包
-- [ ] packages: example+package
-
-
 
 # MVP 进展
 
