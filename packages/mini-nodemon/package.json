@@ -1,0 +1,16 @@
+{
+  "name": "mini-nodemon",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chokidar": "^3.5.2",
+    "koa": "^2.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18"
+  }
+}

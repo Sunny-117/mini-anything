@@ -44,6 +44,8 @@ TODO
 
 ✅ mini-react-hooks 
 
+✅ mini-nodemon
+
 <h2>💼 repo</h2>
 <table>
   <thead align="center">
