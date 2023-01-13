@@ -9,6 +9,10 @@ WIP：https://sunny-117.github.io/mini-anything-docs/
 
 **尽快跑通 MVP 版本，代码架构和工程化设施后续补充**
 
+TODO
+
+- [ ] 打包，发包
+- [ ] packages: example+package
 
 
 <h2>💼 repo</h2>
