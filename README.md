@@ -18,23 +18,15 @@ TODO
 
 # MVP 进展
 
-✅ mini-react-router4
+## 框架
 
-✅ mini-react-router5
+Vuejs
 
-✅ mini-dva
+React
 
-✅ mini-plugin-dva-loading
+✅ mini-react-hooks 
 
-✅ mini-react-redux
-
-✅ mini-ahooks
-
-✅ mini-webpack
-
-✅ mini-redux
-
-✅ connected-react-router
+## Vue 生态
 
 ✅ mini-vue-router3
 
@@ -45,11 +37,55 @@ TODO
 ✅ mini-pinia
 
 ✅ mini-mini-pinia 40行写一个 pinia
+## React 生态
 
-✅ mini-react-hooks 
+✅ mini-react-router4
+
+✅ mini-react-router5
+
+✅ mini-redux
+
+✅ connected-react-router
+
+✅ mini-react-redux
+
+### Redux 中间件
+
+✅ mini-redux-promise
+
+✅ mini-redux-thunk
+
+## 上层框架
+
+✅ mini-dva
+
+✅ mini-plugin-dva-loading
+
+
+## 提效方案
+
+✅ mini-ahooks
+
+
+## 工程化
+
+✅ mini-webpack
+
+mini-vite
+
+
+
+## NodeJS 工具
 
 ✅ mini-nodemon
 
+## 插件
+
+vite 插件
+
+webpack plugin
+
+rollup plugin
 
 
 

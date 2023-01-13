@@ -116,6 +116,16 @@ importers:
       '@vitejs/plugin-react': registry.npmmirror.com/@vitejs/plugin-react/3.0.1_vite@4.0.4
       vite: registry.npmmirror.com/vite/4.0.4
 
+  packages/mini-redux-promise:
+    specifiers:
+      is-promise: ^4.0.0
+      lodash: ^4.17.21
+      lodash-es: ^4.17.21
+    dependencies:
+      is-promise: registry.npmmirror.com/is-promise/4.0.0
+      lodash: registry.npmmirror.com/lodash/4.17.21
+      lodash-es: registry.npmmirror.com/lodash-es/4.17.21
+
   packages/mini-webpack:
     specifiers:
       '@babel/core': ^7.7.7
@@ -12950,6 +12960,12 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
+  registry.npmmirror.com/is-promise/4.0.0:
+    resolution: {integrity: sha512-hvpoI6korhJMnej285dSg6nu1+e6uxs7zG3BYAm5byqDsgJNWwxzM6z6iZiAgQR4TJ30JmBTOwqZUw3WlyH3AQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/is-promise/-/is-promise-4.0.0.tgz}
+    name: is-promise
+    version: 4.0.0
+    dev: false
+
   registry.npmmirror.com/is-redirect/1.0.0:
     resolution: {integrity: sha512-cr/SlUEe5zOGmzvj9bUyC4LVvkNVAXu4GytXLNMr1pny+a65MpQ9IJzFHD5vi7FyJgb4qt27+eS3TuQnqB+RQw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/is-redirect/-/is-redirect-1.0.0.tgz}
     name: is-redirect
@@ -15252,6 +15268,12 @@ packages:
     dependencies:
       p-locate: registry.npmmirror.com/p-locate/4.1.0
     dev: true
+
+  registry.npmmirror.com/lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash-es/-/lodash-es-4.17.21.tgz}
+    name: lodash-es
+    version: 4.17.21
+    dev: false
 
   registry.npmmirror.com/lodash._reinterpolate/3.0.0:
     resolution: {integrity: sha512-xYHt68QRoYGjeeM/XOE1uJtvXQAgvszfBhjV4yvsQH0u2i9I6cI6c6/eG4Hh3UAOVn0y/xAXwmTzEay49Q//HA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz}
