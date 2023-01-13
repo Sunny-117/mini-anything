@@ -1,0 +1,15 @@
+.tab {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+.tab tr{
+    height: 35px;
+}
+
+.tab td,
+.tab th {
+    border: 1px solid #ccc;
+}
