@@ -1,7 +1,7 @@
 # mini-anything
 
 
-# 文档地址
+# documentation
 
 WIP：https://sunny-117.github.io/mini-anything-docs/
 
