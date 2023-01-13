@@ -7,7 +7,7 @@ WIP：https://sunny-117.github.io/mini-anything-docs/
 
 注意：
 
-尽快跑通 MVP 版本，代码架构和工程化设施后续补充
+**尽快跑通 MVP 版本，代码架构和工程化设施后续补充**
 
 
 
