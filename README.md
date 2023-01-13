@@ -34,6 +34,8 @@ TODO
 
 ✅ mini-redux
 
+✅ connected-react-router
+
 <h2>💼 repo</h2>
 <table>
   <thead align="center">

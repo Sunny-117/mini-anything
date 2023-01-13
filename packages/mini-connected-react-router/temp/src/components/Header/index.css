@@ -1,0 +1,16 @@
+.header-content{
+    padding: 0 20px;
+}
+.header-content h1{
+    margin: 0;
+}
+
+.header-content .left{
+    float: left;
+    margin-top: 10px;
+}
+
+.header-content .right{
+    float: right;
+    margin-top: 20px;
+}
