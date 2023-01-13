@@ -24,7 +24,7 @@ TODO
 
 ✅ mini-plugin-dva-loading
 
-✅ react-redux
+✅ mini-react-redux
 
 ✅ mini-ahooks
 
