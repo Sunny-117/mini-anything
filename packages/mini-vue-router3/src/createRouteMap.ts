@@ -1,4 +1,4 @@
-function createRouteMap(routes, oldPathMap) {
+function createRouteMap(routes, oldPathMap?) {
 
 	console.log('%c [  ]-3', 'font-size:13px; background:pink; color:#bf2c9f;', routes)
 	let pathMap = oldPathMap || Object.create(null); // 没有原型链
@@ -12,7 +12,7 @@ function createRouteMap(routes, oldPathMap) {
 	};
 }
 
-function addRouteRecord(route, pathMap, parent) {
+function addRouteRecord(route, pathMap, parent?) {
 	let path = parent ? `${parent.path}/${route.path}` : route.path;
 	let record = {
 		path,

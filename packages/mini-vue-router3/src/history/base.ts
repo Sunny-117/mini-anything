@@ -1,5 +1,6 @@
 class Base {
 	constructor(router) {
+		// @ts-ignore
 		this.router = router;
 	}
 	transitionTo(location, handler) {

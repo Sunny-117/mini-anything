@@ -1,3 +1,4 @@
+// @ts-nocheck
 import install from './install';
 import createMatcher from './createMatcher';
 import HashHistory from './history/hash';

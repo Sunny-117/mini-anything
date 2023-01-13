@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
-
+import myRouter from '../../lib/mini.esm'
+console.log('[ myRouter ] >', myRouter)
 // 在创建vue实例的时候,会传入vue路由的实例
 
 Vue.config.productionTip = false;
