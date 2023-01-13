@@ -32,6 +32,7 @@ TODO
 
 ✅ mini-webpack
 
+✅ mini-redux
 
 <h2>💼 repo</h2>
 <table>
