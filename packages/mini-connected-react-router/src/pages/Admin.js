@@ -4,6 +4,7 @@ import StudentAdd from "./student/StudentAdd"
 import CourseList from "./course/CourseList"
 
 export default function Admin() {
+
     return (
         <>
             <li><NavLink to="/students/add">添加</NavLink></li>
