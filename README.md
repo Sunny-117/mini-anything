@@ -40,11 +40,18 @@ TODO
 
 ✅ mini-vuex4
 
-✅ mini-mini-vuex3 100行写一个vuex
+✅ mini-mini-vuex3 100行写一个 vuex
+
+✅ mini-pinia
+
+✅ mini-mini-pinia 40行写一个 pinia
 
 ✅ mini-react-hooks 
 
 ✅ mini-nodemon
+
+
+
 
 <h2>💼 repo</h2>
 <table>
