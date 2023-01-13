@@ -20,6 +20,8 @@ TODO
 
 ✅ mini-react-router4
 
+✅ mini-react-router5
+
 ✅ mini-dva
 
 ✅ mini-plugin-dva-loading
