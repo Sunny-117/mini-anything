@@ -20,10 +20,10 @@ WIP：https://sunny-117.github.io/mini-anything-docs/
 
 注意：
 
-**跑通 MVP 版本，代码架构和工程化设施后续补充**
+- [x] 跑通 MVP 版本
 
 TODO
-
+- [ ] 代码架构和工程化设施后续补充
 - [ ] 打包，发包
 
 # MVP 进展
