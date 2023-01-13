@@ -20,7 +20,7 @@ WIP：https://sunny-117.github.io/mini-anything-docs/
 
 注意：
 
-- [x] 跑通 MVP 版本
+- [x] 跑通 MVP 版本 （Minimum Viable Product –最简化可实行产品）
 
 TODO
 - [ ] 代码架构和工程化设施后续补充
