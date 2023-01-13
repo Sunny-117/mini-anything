@@ -36,6 +36,8 @@ TODO
 
 ✅ connected-react-router
 
+✅ mini-vue-router3
+
 <h2>💼 repo</h2>
 <table>
   <thead align="center">
