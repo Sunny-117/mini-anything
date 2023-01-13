@@ -17,12 +17,18 @@ function Counter(props) {
                     props.onAdd(n);
                 }}>加上</button>
             </p>
+            {
+                props.isLoading && <div style={{ fontSize: "2em", color: "red" }}>
+                    加载中....
+                </div>
+            }
         </div>
     )
 }
 
 const mapStateToProps = state => ({
-    number: state.counter
+    number: state.counter,
+    isLoading: state.loading.models.counter
 })
 
 const mapDispatchToProps = dispatch => ({

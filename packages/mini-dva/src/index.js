@@ -4,6 +4,8 @@ import counterModel from "./models/counter"
 import studentsModel from "./models/students"
 import { createBrowserHistory } from "history"
 
+import createLoading from "./dva/dva-loading"
+
 const logger = store => next => action => {
     console.log('%c [ 老状态： ]: ', 'color: #bf2c9f; background: pink; font-size: 13px;', store.getState())
     console.log("action：", action)
@@ -54,6 +56,7 @@ const app = dva({
         }
     }]
 });
+app.use(createLoading());
 //在启动之前定义模型
 app.model(counterModel)
 app.model(studentsModel)

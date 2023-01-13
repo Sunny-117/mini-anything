@@ -18,11 +18,19 @@ export default function (opts = {}) {
         _models: [], //记录已经定义的模型
         router,
         _router: null, //用于记录路由函数
-        start
+        start,
+        use
     }
-    const options = getOptions();
+    let options = getOptions();
     return app;
 
+    /**
+    * 使用dva插件
+    * @param {*} plugin 配置对象
+    */
+    function use(plugin) {
+        options = { ...options, ...plugin }
+    }
 
     function getOptions() {
         const options = {
@@ -37,14 +45,8 @@ export default function (opts = {}) {
         }
 
         if (opts.onAction) {
-            if (Array.isArray(opts.onAction)) {
-                options.onAction = opts.onAction;
-            }
-            else {
-                options.onAction = [opts.onAction];
-            }
-        }
-        else {
+            options.onAction = Array.isArray(opts.onAction) ? opts.onAction : [opts.onAction];
+        } else {
             options.onAction = [];
         }
         return options;
