@@ -38,6 +38,10 @@ TODO
 
 ✅ mini-vue-router3
 
+✅ mini-vuex4
+
+✅ mini-mini-vuex3 100行写一个vuex
+
 <h2>💼 repo</h2>
 <table>
   <thead align="center">
