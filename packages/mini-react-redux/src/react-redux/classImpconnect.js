@@ -40,7 +40,6 @@ export default function (mapStateToProps, mapDispatchToProps) {
 
             componentWillUnmount() {
                 if (this.unlisten) {
-                    //当组件卸载时，取消监听
                     this.unlisten();
                 }
             }
