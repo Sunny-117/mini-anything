@@ -1,31 +1,9 @@
 import React, { useContext, useState, useEffect } from "react"
 import { bindActionCreators } from "redux"
 import ctx from "./ctx";
-/**
- * 模拟类组件的 pureComponent
- * @param {*} obj1 
- * @param {*} obj2 
- * @returns 
- */
-function compare(obj1, obj2) {
-    for (const key in obj1) {
-        if (obj1[key] !== obj2[key]) {
-            return false;
-        }
-    }
-    return true;
-}
+import { compare } from './compare';
 
-/**
- * 函数组件模式
- * @param {*} mapStateToProps 
- * @param {*} mapDispatchToProps 
- * @returns 
- */
 export default function (mapStateToProps, mapDispatchToProps) {
-    /**
-     * 返回一个高阶组件
-     */
     return function (Comp) {
         //对于Temp组件，只有它需要的数据发生变化时才会重新渲染
         function Temp(props) {

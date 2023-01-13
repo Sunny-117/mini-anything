@@ -2,16 +2,7 @@ import React, { PureComponent } from "react"
 import { bindActionCreators } from "redux"
 import ctx from "./ctx";
 
-/**
- * 类组件模式
- * @param {*} mapStateToProps 
- * @param {*} mapDispatchToProps 
- * @returns 
- */
 export default function (mapStateToProps, mapDispatchToProps) {
-    /**
-     * 返回一个高阶组件
-     */
     return function (Comp) {
         //对于Temp组件，只有它需要的数据发生变化时才会重新渲染
         class Temp extends PureComponent {
