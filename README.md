@@ -15,6 +15,18 @@ TODO
 - [ ] packages: example+package
 
 
+
+# MVP 进展
+
+✅ mini-react-router4
+
+✅ mini-dva
+
+✅ mini-plugin-dva-loading
+
+
+
+
 <h2>💼 repo</h2>
 <table>
   <thead align="center">
@@ -179,13 +191,3 @@ TODO
 
 - Modern browsers
 - NodeJS
-
-# MVP 进展
-
-✅ mini-react-router4
-
-✅ mini-dva
-
-✅ mini-plugin-dva-loading
-
-
