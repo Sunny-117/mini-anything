@@ -33,6 +33,8 @@ TODO
 
 ## 框架
 
+> 由于 Vue, React 较为复杂，mini-vue 和 mini-react 在其他仓库(WIP)
+
 📝 Vuejs
 
 📝 React
@@ -86,6 +88,7 @@ TODO
 
 ✅ mini-webpack
 
+
 📝 mini-vite
 
 
@@ -98,7 +101,7 @@ TODO
 
 📝 vite 插件
 
-📝 webpack plugin
+✅ mini-webpack-loader-plugins
 
 📝 rollup plugin
 
