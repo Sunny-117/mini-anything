@@ -118,7 +118,7 @@ TODO
     <tr>
       <th>
         <a href="#" target="_blank">
-        <img src="./img/mini-vue.png" width="50" align="center" height="50"/>
+        <img src="./img/mini-vue.png" width="50" align="center"/>
         </a>
       </th>
       <th>
@@ -133,7 +133,7 @@ TODO
     <tr>
       <th>
         <a href="" target="_blank">
-        <img src="./img/mini-react.png" width="50" align="center" height="50"/>
+        <img src="./img/mini-react.png" width="50" align="center"/>
         </a>
       </th>
       <th>
@@ -149,7 +149,7 @@ TODO
     <tr>
       <th>
         <a href="#" target="_blank">
-         <img src="./img/mini-vue.png" width="50" align="center" height="50"/>
+         <img src="./img/mini-vue.png" width="50" align="center"/>
         </a>
       </th>
       <th>
@@ -164,7 +164,7 @@ TODO
     <tr>
       <th>
         <a href="#" target="_blank">
-         <img src="./img/mini-vue.png" width="50" align="center" height="50"/
+         <img src="./img/mini-vue.png" width="50" align="center"/
         </a>
       </th>
       <th>
