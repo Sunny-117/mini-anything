@@ -3,46 +3,46 @@ import Vuex from './vuex'
 
 Vue.use(Vuex); // install 方法
 export default new Vuex.Store({
-  modules:{ // 可以给状态划分模块   递归
-    a:{
-      state:{
-        count:200
+  modules: { // 可以给状态划分模块   递归
+    a: {
+      state: {
+        count: 200
       },
-      mutations:{
-        change(state){
+      mutations: {
+        change(state) {
           console.log('----')
         }
       },
-      modules:{
-        b:{
-          state:{
-            count:3000
+      modules: {
+        b: {
+          state: {
+            count: 3000
           }
         }
       }
     },
-   
+
   },
   state: {
-    count:100
+    count: 100
   },
-  getters:{
-    newCount(state){ // 200
+  getters: {
+    newCount(state) { // 200
       return state.count + 100;
     }
   },
   mutations: {
-    change(state){
+    change(state) {
       // this => store
       console.log('xxxxx')
-      state.count+=10
+      state.count += 10
     }
   },
   actions: {
-    change({commit}){
-      setTimeout(()=>{
+    change({ commit }) {
+      setTimeout(() => {
         commit('change');
-      },1000);
+      }, 1000);
     }
   }
 })
