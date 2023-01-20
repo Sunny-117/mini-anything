@@ -102,6 +102,9 @@ TODO
 
 📝 rollup plugin
 
+## 状态管理
+
+✅ mini-mobx
 
 
 <h2>💼 repo</h2>
