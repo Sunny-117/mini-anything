@@ -1,0 +1,29 @@
+{
+  "name": "react-scripts",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "付志强 <zhiqiangfu6@gmail.com>",
+  "homepage": "https://github.com/Sunny-117/mini-anything#readme",
+  "license": "ISC",
+  "main": "lib/react-scripts.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npm.taobao.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sunny-117/mini-anything.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/react-scripts.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/Sunny-117/mini-anything/issues"
+  }
+}
