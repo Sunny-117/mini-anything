@@ -5,6 +5,15 @@
     "packages/*"
   ],
   "devDependencies": {
-    "lerna": "^5.5.2"
+    "lerna": "^3.22.1"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "cross-spawn": "^7.0.3",
+    "fs-extra": "^9.1.0"
+  },
+  "scripts": {
+    "mini-create-react-app": "node ./packages/mini-create-react-app/index.js",
+    "start": "node ./packages/mini-create-react-app/index.js"
   }
 }

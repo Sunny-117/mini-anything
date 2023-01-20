@@ -1,0 +1,19 @@
+{
+  "name": "react-scripts2",
+  "version": "0.0.0",
+  "license": "ISC",
+  "scripts": {
+    "build": "node ./bin/react-scripts2 build",
+    "start": "node ./bin/react-scripts2 start"
+  },
+  "bin": {
+    "react-scripts2": "./bin/react-scripts2.js"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.12.13",
+    "html-webpack-plugin": "^5.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "webpack": "^5.21.1"
+  }
+}
