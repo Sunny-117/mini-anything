@@ -37,7 +37,7 @@ function createApplication() {
         next(); // 中间件中的next方法
     }
     app.routes = [];
-    app.use = function (path, handler) {
+    app.use = function (path: string, handler: any) {
         if (typeof handler !== 'function') {
             handler = path;
             path = '/';
