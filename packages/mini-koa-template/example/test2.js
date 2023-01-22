@@ -1,4 +1,4 @@
-import Koa from './lib/mini.esm';
+import Koa from './lib/mini.esm.js';
 let app = new Koa();
 app.use((ctx) => {
   console.log(ctx.req.path);
