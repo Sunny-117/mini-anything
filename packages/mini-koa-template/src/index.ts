@@ -1,1 +1,2 @@
-export const a = 1
+import application from './application'
+export default application

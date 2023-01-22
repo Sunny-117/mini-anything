@@ -4,6 +4,7 @@
   "description": "",
   "main": "lib/mini.cjs.js",
   "module": "lib/mini.esm.js",
+  "type": "module",
   "scripts": {
     "build": "rollup -c rollup.config.js --bundleConfigAsCjs --watch",
     "test": "vitest"
@@ -11,7 +12,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "koa": "^2.5.1"
   },
   "author": "",
   "license": "ISC",
