@@ -90,7 +90,7 @@ TODO
 ✅ mini-webpack
 
 
-📝 mini-vite
+✅ mini-vite
 
 
 
