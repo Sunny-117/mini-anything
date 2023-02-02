@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "vite": "^4.0.4"
+  }
+}
