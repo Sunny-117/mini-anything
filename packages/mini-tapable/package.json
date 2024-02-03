@@ -1,0 +1,14 @@
+{
+  "name": "mini-tapable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vitest": "^1.2.2"
+  }
+}
