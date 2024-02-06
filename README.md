@@ -1,7 +1,7 @@
 <h1 align="center">Welcome to mini-anything【MVP】 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
-  <a href="https://sunny-117.github.io/mini-anything-docs/" target="_blank">
+  <a href="https://sunny-117.github.io/mini-anything/" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
   <a href="https://opensource.org/licenses/MIT" target="_blank">
@@ -9,20 +9,20 @@
   </a>
 </p>
 
-> 🚀 mini-anything 是一个集合了前端领域的各种迷你版本的库，方便前端学习者学习，探索前端源码。里面的库是原库的超级迷你版本，只包含原库的主流程，不包含边界case，所以建议仅学习使用，请勿用于生产环境
+> 🚀 mini-anything 是一个集合了前端领域的各种迷你版本的库，方便前端学习者学习，探索前端源码。里面的库是原库的超级迷你版本，只包含原库的主流程，不包含边界 case，所以建议仅学习使用，请勿用于生产环境
 
 ### 🏠 [Homepage](https://github.com/Sunny-117/mini-anything)
 
-
 # documentation
 
-WIP：https://sunny-117.github.io/mini-anything-docs/
+WIP：https://sunny-117.github.io/mini-anything/
 
 注意：
 
 - [x] 跑通 MVP 版本 （Minimum Viable Product –最简化可实行产品）
 
 TODO
+
 - [ ] 代码架构和工程化设施后续补充
 - [ ] 打包，发包
 
@@ -36,9 +36,9 @@ TODO
 
 📝 React
 
-✅ mini-react-hooks 
+✅ mini-react-hooks
 
-  - useState
+- useState
 
 ## Vue 生态
 
@@ -46,11 +46,12 @@ TODO
 
 ✅ mini-vuex4
 
-✅ mini-mini-vuex3 100行写一个 vuex
+✅ mini-mini-vuex3 100 行写一个 vuex
 
 ✅ mini-pinia
 
-✅ mini-mini-pinia 40行写一个 pinia
+✅ mini-mini-pinia 40 行写一个 pinia
+
 ## React 生态
 
 ✅ mini-react-router4
@@ -81,20 +82,15 @@ TODO
 
 ✅ mini-plugin-dva-loading
 
-
 ## 提效方案
 
 ✅ mini-ahooks
-
 
 ## 工程化
 
 ✅ mini-webpack
 
-
 ✅ mini-vite
-
-
 
 ## NodeJS 生态
 
@@ -115,7 +111,6 @@ TODO
 ## 状态管理
 
 ✅ mini-mobx
-
 
 <h2>💼 repo</h2>
 <table>
@@ -271,11 +266,9 @@ TODO
   </tbody>
 </table>
 
-
 <p>
       未完待续
 </p>
-
 
 🖥 Environment Suppor
 
@@ -286,11 +279,8 @@ TODO
 
 👤 **sunny-117**
 
-* Website: https://sunny-117.github.io/blog/
-* Github: [@sunny-117](https://github.com/sunny-117)
-
-
-
+- Website: https://sunny-117.github.io/blog/
+- Github: [@sunny-117](https://github.com/sunny-117)
 
 ## 🤝 Contributing
 
@@ -305,5 +295,6 @@ Give a ⭐️ if this project helped you!
 Copyright © 2023 [sunny-117](https://github.com/sunny-117).<br />
 This project is [MIT](https://opensource.org/licenses/MIT) licensed.
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
