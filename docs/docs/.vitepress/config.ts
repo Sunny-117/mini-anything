@@ -10,7 +10,7 @@ import { defaultSidebar } from './defaultSidebar'
 
 
 export default defineConfig({
-  base: '/mini-anything-docs/',
+  base: '/mini-anything/',
   title: 'mini-anything',
   description: '',
   // appearance: false,
