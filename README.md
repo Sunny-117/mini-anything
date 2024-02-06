@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to mini-anything【MVP】 👋</h1>
+<h1 align="center">Welcome to mini-anything 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
   <a href="https://sunny-117.github.io/mini-anything/" target="_blank">
@@ -14,17 +14,6 @@
 ### 🏠 [Homepage](https://github.com/Sunny-117/mini-anything)
 
 # documentation
-
-WIP：https://sunny-117.github.io/mini-anything/
-
-注意：
-
-- [x] 跑通 MVP 版本 （Minimum Viable Product –最简化可实行产品）
-
-TODO
-
-- [ ] 代码架构和工程化设施后续补充
-- [ ] 打包，发包
 
 # MVP 进展
 
