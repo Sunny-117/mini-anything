@@ -9,7 +9,7 @@ next: ./vue-core/index
 :::danger 进度说明
 目前，mini-anything 仓库 MVP 版本已经完成，详细 code 请看 [mini-anything](https://github.com/Sunny-117/mini-anything)
 
-文档还在更新中，大概会在 2 月初会更新完所有的 MVP 版本文档
+文档还在更新中
 :::
 
 ## 目录
@@ -29,10 +29,6 @@ next: ./vue-core/index
 ✅ vuex
 
 ✅ pina
-
-✅ vueuse
-
-✅
 
 ### React 周边
 
