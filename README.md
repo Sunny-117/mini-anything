@@ -82,15 +82,13 @@ TODO
 
 ✅ mini-plugin-dva-loading
 
-## 提效方案
-
-✅ mini-ahooks
-
 ## 工程化
 
 ✅ mini-webpack
 
 ✅ mini-vite
+
+详见：https://github.com/Sunny-117/tiny-vite
 
 ✅ mini-rollup
 
