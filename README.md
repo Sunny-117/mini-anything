@@ -92,6 +92,10 @@ TODO
 
 ✅ mini-vite
 
+✅ mini-rollup
+
+详见：https://github.com/Sunny-117/cherry
+
 ## NodeJS 生态
 
 ✅ mini-nodemon
