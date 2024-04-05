@@ -24,7 +24,7 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "src/stores/counter-options.ts"
+    "src/stores/options.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

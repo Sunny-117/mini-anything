@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { inject, toRefs } from "vue";
-import { useCounterStore } from "./stores/counter";
+import { useCounterStore } from "./stores/composition";
 import { PiniaSymbol } from "./pinia/rootState";
 
 const store = useCounterStore();
@@ -16,4 +16,4 @@ console.log(inject(PiniaSymbol));
 </template>
 
 <style scoped></style>
-./stores/counter-options
+./stores/counter-options./stores/composition
