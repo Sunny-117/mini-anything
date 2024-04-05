@@ -41,6 +41,8 @@
 
 ✅ mini-mini-pinia 40 行写一个 pinia
 
+✅ mini-pinia-ts 最接近官方的 pinia 实现
+
 ## React 生态
 
 ✅ mini-react-router4
