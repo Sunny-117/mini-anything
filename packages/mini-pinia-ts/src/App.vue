@@ -16,3 +16,4 @@ console.log(inject(PiniaSymbol));
 </template>
 
 <style scoped></style>
+./stores/counter-options
