@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { inject, toRefs } from "vue";
-import { useCounterStore } from "./stores/options";
+import { useCounterStore } from "./stores/composition";
 import { PiniaSymbol } from "./pinia/rootState";
 
 const store = useCounterStore();
@@ -30,6 +30,18 @@ function reset() {
 // 只要状态变化了，就会触发
 store.$subscribe((mutations, state) => {
   console.log(mutations, state);
+});
+store.$onAction(({ after, onError }) => {
+  // 大多数action是一个promise
+  after(() => {
+    console.log(store.count);
+  });
+  after(() => {
+    console.log(store.count);
+  });
+  onError((e) => {
+    console.warn(e);
+  });
 });
 </script>
 <template>

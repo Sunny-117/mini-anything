@@ -6,7 +6,18 @@ export const useCounterStore = defineStore("counter", () => {
 
   const double = computed(() => count.value * 2);
 
-  const increment = (payload: number) => (count.value += payload);
+  const increment = async (payload: number) => {
+    return new Promise((res: Function, rej: Function) => {
+      setTimeout(() => {
+        count.value += payload;
+        if (Math.random() > 0.5) {
+          res();
+        } else {
+          rej("失败了");
+        }
+      }, 1000);
+    });
+  };
 
   return {
     count,

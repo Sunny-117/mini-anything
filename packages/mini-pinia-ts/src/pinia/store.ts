@@ -8,6 +8,7 @@ import {
 } from "vue";
 import { PiniaSymbol } from "./rootState";
 import { callSetup, merge } from "./utils";
+import { addSubscription } from "./sub";
 
 export function defineStore(idOrOptions: string, setup: Function) {
   let id: string;
@@ -40,14 +41,31 @@ export function defineStore(idOrOptions: string, setup: Function) {
           callback({ id }, state);
         });
       }
+      const actionSubscriptions: any[] = [];
+
       const partialStore = {
         $patch,
         $subscribe,
+        $onAction: addSubscription.bind(null, actionSubscriptions),
       };
       if (isSetupStore) {
-        createSetupStore(id, setup, pinia, isSetupStore, partialStore);
+        createSetupStore(
+          id,
+          setup,
+          pinia,
+          isSetupStore,
+          partialStore,
+          actionSubscriptions
+        );
       } else {
-        createOptionStore(id, options, pinia, isSetupStore, partialStore);
+        createOptionStore(
+          id,
+          options,
+          pinia,
+          isSetupStore,
+          partialStore,
+          actionSubscriptions
+        );
       }
     }
     const store = pinia._s.get(id);
@@ -61,7 +79,8 @@ export function createOptionStore(
   options,
   pinia,
   isSetupStore: boolean,
-  partialStore
+  partialStore,
+  actionSubscriptions
 ) {
   const { state, actions, getters = {} } = options;
   partialStore.$reset = function $reset() {
@@ -85,7 +104,7 @@ export function createOptionStore(
     );
     return setupStore;
   }
-  callSetup(id, setup, store, pinia, isSetupStore);
+  callSetup(id, setup, store, pinia, isSetupStore, actionSubscriptions);
   return store;
 }
 
@@ -94,8 +113,9 @@ export function createSetupStore(
   setup,
   pinia,
   isSetupStore?: boolean,
-  partialStore
+  partialStore,
+  actionSubscriptions
 ) {
   const store = reactive(partialStore);
-  callSetup(id, setup, store, pinia, isSetupStore);
+  callSetup(id, setup, store, pinia, isSetupStore, actionSubscriptions);
 }

@@ -1,11 +1,46 @@
 import { isObject } from "lodash-es";
 import { isRef } from "vue";
+import { triggerSusbscriptions } from "./sub";
 
-export function callSetup(id, setup, store, pinia, isSetupStore: boolean) {
+export function callSetup(
+  id,
+  setup,
+  store,
+  pinia,
+  isSetupStore: boolean,
+  actionSubscriptions: any[]
+) {
   function wrapAction(action) {
     return function (...args: any) {
-      // 将函数的this永远指向store
-      action.call(store, ...args);
+      const afterCallbacks: any[] = [];
+      const onErrorCallbacks: any[] = [];
+      const after = (callback: Function) => {
+        afterCallbacks.push(callback);
+      };
+      const onError = (callback: Function) => {
+        onErrorCallbacks.push(callback);
+      };
+      triggerSusbscriptions(actionSubscriptions, { after, onError });
+      let res;
+      // 1. 回调的方式
+      try {
+        // 将函数的this永远指向store
+        res = action.call(store, ...args);
+        triggerSusbscriptions(afterCallbacks, res);
+      } catch (error) {
+        triggerSusbscriptions(onErrorCallbacks, error);
+      }
+      // 2. 返回值是promise
+      if (res instanceof Promise) {
+        return res
+          .then((value) => {
+            triggerSusbscriptions(afterCallbacks, value);
+          })
+          .catch((error: any) => {
+            triggerSusbscriptions(onErrorCallbacks, error);
+          });
+      }
+      return res;
     };
   }
   if (isSetupStore) {
