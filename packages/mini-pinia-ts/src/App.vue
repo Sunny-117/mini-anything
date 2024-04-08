@@ -2,12 +2,17 @@
 import { inject, toRefs } from "vue";
 import { useCounterStore } from "./stores/composition";
 import { PiniaSymbol } from "./pinia/rootState";
+import { storeToRefs } from "./pinia";
 
 const store = useCounterStore();
 const { count, double } = toRefs(store);
 console.log(count, double);
 console.log(store);
 console.log(inject(PiniaSymbol));
+
+// toRefs会把函数也转成ref，所以提供了storeToRefs
+console.log(1, storeToRefs(store));
+console.log(2, toRefs(store));
 
 function patch() {
   // 单次修改 多次

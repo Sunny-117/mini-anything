@@ -52,10 +52,21 @@ export function callSetup(
     if (typeof value === "function") {
       setupStore[prop] = wrapAction(value);
     } else if (isSetupStore) {
-      pinia.state.value[id][prop] = value;
+      // 为什么官方没有这个api：https://github.com/vuejs/core/pull/4165/files
+      if (!isComputed(value)) {
+        pinia.state.value[id][prop] = value;
+      }
     }
   }
   Object.assign(store, setupStore);
+  Object.defineProperty(store, "$state", {
+    get() {
+      return pinia.state.value[id];
+    },
+    set(newState) {
+      store.$patch(newState);
+    },
+  });
   pinia._p.forEach((plugin) => {
     plugin({ store, id });
   });
@@ -74,4 +85,8 @@ export function merge(target, partialState) {
     }
   }
   return target;
+}
+
+function isComputed(value: any) {
+  return isRef(value) && value.effect;
 }
