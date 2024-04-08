@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { inject, toRefs } from "vue";
-import { useCounterStore } from "./stores/composition";
+import { useCounterStore } from "./stores/options";
 import { PiniaSymbol } from "./pinia/rootState";
 
 const store = useCounterStore();
@@ -24,12 +24,20 @@ function patch() {
     state.count++;
   });
 }
+function reset() {
+  store.$reset(); // 拿到默认的state方法 执行一次获取默认值，覆盖掉所有状态（仅支持options api）
+}
+// 只要状态变化了，就会触发
+store.$subscribe((mutations, state) => {
+  console.log(mutations, state);
+});
 </script>
 <template>
   <div>计数器：{{ store.count }}</div>
   <button @click="store.increment(2)">点击</button>
   <div>双倍：{{ store.double }}</div>
   <button @click="patch()">同时多次修改状态</button>
+  <button @click="reset">reset</button>
 </template>
 
 <style scoped></style>

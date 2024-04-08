@@ -1,4 +1,11 @@
-import { computed, getCurrentInstance, inject, reactive, toRefs } from "vue";
+import {
+  computed,
+  getCurrentInstance,
+  inject,
+  reactive,
+  toRefs,
+  watch,
+} from "vue";
 import { PiniaSymbol } from "./rootState";
 import { callSetup, merge } from "./utils";
 
@@ -27,8 +34,15 @@ export function defineStore(idOrOptions: string, setup: Function) {
           partialStateOrMutator(pinia.state.value[id]);
         }
       }
+      function $subscribe(callback) {
+        // 默认vue3中watch一个响应式数据深度监控的可以直接放一个响应式对象
+        watch(pinia.state.value[id], (state) => {
+          callback({ id }, state);
+        });
+      }
       const partialStore = {
         $patch,
+        $subscribe,
       };
       if (isSetupStore) {
         createSetupStore(id, setup, pinia, isSetupStore, partialStore);
@@ -50,6 +64,10 @@ export function createOptionStore(
   partialStore
 ) {
   const { state, actions, getters = {} } = options;
+  partialStore.$reset = function $reset() {
+    const newState = state ? state() : {};
+    this.$patch(newState);
+  };
   const store = reactive(partialStore);
   function setup() {
     pinia.state.value[id] = state ? state() : {};
@@ -59,6 +77,7 @@ export function createOptionStore(
       actions,
       Object.keys(getters).reduce((computeds, getterKey) => {
         computeds[getterKey] = computed(() => {
+          const store = pinia._s.get(id);
           return getters[getterKey].call(store);
         });
         return computeds;
