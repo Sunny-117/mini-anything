@@ -8,6 +8,9 @@ const { count, double } = toRefs(store);
 console.log(count, double);
 console.log(store);
 console.log(inject(PiniaSymbol));
+// store.$subscribe((mutations, state) => {
+//   console.log(mutations, state, "---");
+// });
 </script>
 <template>
   <div>计数器：{{ store.count }}</div>

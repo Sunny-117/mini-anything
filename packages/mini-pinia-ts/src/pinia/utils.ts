@@ -13,5 +13,8 @@ export function callSetup(id, setup, store, pinia) {
     }
   }
   Object.assign(store, setupStore);
+  pinia._p.forEach((plugin) => {
+    plugin({ store, id });
+  });
   pinia._s.set(id, store);
 }
