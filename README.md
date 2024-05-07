@@ -87,6 +87,10 @@
 
 详见：https://github.com/Sunny-117/cherry
 
+✅ mini-jest
+
+迷你单元测试框架
+
 ## NodeJS 生态
 
 ✅ mini-nodemon

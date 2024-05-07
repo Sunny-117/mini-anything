@@ -1,0 +1,18 @@
+{
+  "name": "best",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.mjs"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "expect": "^29.5.0",
+    "glob": "^10.2.5",
+    "jest-circus": "^29.5.0",
+    "jest-haste-map": "^29.5.0",
+    "jest-mock": "^29.5.0",
+    "jest-worker": "^29.5.0"
+  }
+}
