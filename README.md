@@ -122,9 +122,17 @@ https://github.com/Sunny-117/mini-formily
 
 ## 插件
 
-📝 vite 插件
+✅ vite 插件
 
-📝 rollup plugin
+https://github.com/sunny-117/vite-plugins
+
+✅ rollup plugin
+
+https://github.com/Sunny-117/rollup-core-plugins
+
+✅ esbuild plugin
+
+https://github.com/Sunny-117/esbuild-book
 
 ## 状态管理
 
