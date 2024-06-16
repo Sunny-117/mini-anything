@@ -66,8 +66,6 @@ https://github.com/sunny-117/tiny-react
 
 ✅ mini-react-redux
 
-### Redux 中间件
-
 ✅ mini-redux-promise
 
 ✅ mini-redux-thunk
@@ -81,6 +79,8 @@ https://github.com/sunny-117/tiny-react
 ## 上层框架
 
 ✅ mini-dva
+
+✅ mini-umi
 
 ✅ mini-plugin-dva-loading
 
