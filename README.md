@@ -21,7 +21,7 @@
 
 ## 框架
 
-> 由于 Vue, React 较为复杂，mini-vue 和 mini-react 在其他仓库(WIP)
+> 由于 Vue, React 较为复杂，mini-vue 和 mini-react 在其他仓库
 
 ✅ mini-vue3
 
