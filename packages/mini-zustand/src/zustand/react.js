@@ -4,8 +4,14 @@ import { createStore } from './vanilla';
 import { useSyncExternalStore, useRef, useCallback } from 'react';
 // 定义 useStore 函数，接收 api 对象作为参数
 export function useStore(api, selector) {
-    const lastSnapshotRef = useRef(null);
-    const lastSelectionRef = useRef(null);
+    // Warning: The result of getSnapshot should be cached to avoid an infinite loop
+    // let value = useSyncExternalStore(api.subscribe, ()=>{
+    //     return selector(api.getState())
+    // })
+    // return value
+    // 实现缓存
+    const lastSnapshotRef = useRef(null); // 缓存上一次整个状态快照
+    const lastSelectionRef = useRef(null); // 缓存上一次选择的结果对象
     const getSelection = useCallback(() => {
         let lastSelection = lastSelectionRef.current;
         if (lastSelection === null) {
@@ -18,6 +24,7 @@ export function useStore(api, selector) {
         const lastSnapshot = lastSnapshotRef.current;
         const nextSnapShot = api.getState();
         if (Object.is(lastSnapshot, nextSnapShot)) {
+            // 状态一样 返回缓存值，不计算
             return lastSelection;
         }
         const nextSelection = selector(nextSnapShot);

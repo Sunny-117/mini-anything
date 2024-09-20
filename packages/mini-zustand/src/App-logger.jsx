@@ -1,6 +1,7 @@
 // 引入 zustand 库中的 create 函数
-import { create } from "./zustand";
+import { create } from "./zustand/index.js";
 import logger from './zustand/middleware/logger.js'; // 导入 logger 中间件从 './zustand/middleware/logger' 模块中
+import { persist, createJSONStorage } from './zustand/middleware/persist'
 /**
  * 定义了一个名为 useStore 的状态管理器，状态管理器有三个属性：number，add，minus
  * number 属性代表状态管理器中的状态，add 和 minus 函数分别是更新 number 属性的方法
@@ -27,7 +28,7 @@ const useStore = create(logger((set) => ({
 function App() {
   // 从useStore状态管理器中解构出了四个状态：name，number，add，minus
   // const { name, number, add, minus, asyncAdd } = useStore();
-  
+
   // ! 状态分片
   const { number, name, add, minus, asyncAdd } = useStore(state => (
     {
