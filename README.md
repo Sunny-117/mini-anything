@@ -138,6 +138,8 @@ https://github.com/Sunny-117/esbuild-book
 
 ✅ mini-mobx
 
+✅ mini-zustand
+
 ## 编译器
 
 ✅ parse&codegen&compiler
