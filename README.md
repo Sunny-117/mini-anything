@@ -72,6 +72,8 @@ https://github.com/sunny-117/tiny-react
 
 ✅ mini-redux-saga
 
+✅ mini-recoil
+
 ## 工具链
 
 ✅ mini-create-react-app-template
