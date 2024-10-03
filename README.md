@@ -15,10 +15,6 @@
 
 # documentation
 
-## JS 工具库
-
-✅ mini-axios
-
 ## 框架
 
 > 由于 Vue, React 较为复杂，mini-vue 和 mini-react 在其他仓库
@@ -114,13 +110,17 @@ https://github.com/Sunny-117/mini-formily
 
 迷你单元测试框架
 
-## NodeJS 生态
+## 工具库
+
+✅ mini-axios
 
 ✅ mini-nodemon
 
 ✅ mini-express
 
 ✅ mini-koa
+
+TODO: [mini-mitt](https://github.com/developit/mitt)
 
 ## 插件
 
