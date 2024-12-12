@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "vitest": "^1.2.2"
+  },
+  "dependencies": {
+    "tapable": "^2.2.1"
   }
 }
