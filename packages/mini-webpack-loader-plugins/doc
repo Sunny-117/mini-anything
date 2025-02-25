@@ -1,0 +1,92 @@
+```js
+const parser = require("@babel/parser");
+const traverse = require("@babel/traverse").default;
+const fs = require("fs");
+const path = require('path');
+const babel = require('@babel/core');
+
+const moduleAnalyser = (fileName) => {
+    const content = fs.readFileSync(fileName, "utf-8");
+    const ast = parser.parse(content, {
+        // parse in strict mode and allow module declarations
+        sourceType: "module",
+    });
+    const deps = {};
+    traverse(ast, {
+        ImportDeclaration({node}) {
+            const dirName = path.dirname(fileName);
+            //console.log(dirName);
+            const newFile = './' + path.join(dirName, node.source.value);
+            //console.log(newFile); // ./src 
+            deps[node.source.value] = newFile
+        }
+    });
+    // console.log(deps);
+
+    // 这个地方的code就是浏览器能跑起来的code
+    const {code} = babel.transformFromAst(ast, null, {
+        presets: ['@babel/preset-env']
+    })
+    // console.log(code);
+    return {
+        fileName,
+        deps,
+        code
+    }
+};
+
+const makeDepsGrap = (entry) => {
+    const info = moduleAnalyser(entry);
+    const grapArray = [info];
+    for (let i=0; i< grapArray.length; i++) {
+        const item = grapArray[i];
+        const {deps} = item;
+        if (deps) {
+            for (let j in deps) {
+                const newInfo = moduleAnalyser(deps[j]); // src/message.js
+                grapArray.push(newInfo);
+            }
+        }
+    }
+    // console.log(grapArray);
+    const graph = {};
+    grapArray.forEach(item => {
+        graph[item.fileName] = {
+            deps: item.deps,
+            code: item.code
+        }
+
+    });
+    return graph;
+}
+
+// 生成可执行的代码
+const generateCode = (entry) => {
+    // console.log(makeDepsGrap("./src/index.js"));
+    const graph = JSON.stringify(makeDepsGrap("./src/index.js"));
+    return `
+        (function (graph) {
+            function require(module){
+                function localRequire(relativePath){
+                    return require(graph[module].deps[relativePath]);
+                }
+                var exports = {};
+                (function(require,exports, code){
+                    eval(code)
+                })(localRequire, exports, graph[module].code)
+                return exports;
+            }
+            require('${entry}');
+        })(${graph});
+    
+    `
+
+    // return graph;
+}
+
+const code = generateCode("./src/index.js");
+console.log(code);
+
+
+
+```
