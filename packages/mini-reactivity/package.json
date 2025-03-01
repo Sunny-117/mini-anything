@@ -7,8 +7,8 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "dev": "tsup src/index.ts",
-    "tsup": "tsup --watch"
+    "build": "tsup",
+    "dev": "tsup --watch"
   },
   "keywords": [],
   "author": "",
