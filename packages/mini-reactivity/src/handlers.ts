@@ -3,7 +3,7 @@ import { TrackOpTypes, TriggerOpTypes } from "./operations";
 import { reactive } from "./reactive";
 import { hasChanged, isObject } from "./utils";
 
-const RAW = Symbol("raw");
+const RAW = Symbol("raw"); // 无需导出，保证外部获取不到这个属性
 
 const arrayInstrumentations = {};
 
