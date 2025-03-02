@@ -15,7 +15,7 @@ let isRun = false;
 const effectFn = effect(fn1, {
   lazy: true,
   scheduler: (effect: Function) => {
-    // console.log("scheduler");
+    console.log("scheduler");
     Promise.resolve().then(() => {
       if (!isRun) {
         isRun = true;

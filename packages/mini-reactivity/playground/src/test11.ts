@@ -6,12 +6,22 @@ const obj = {
 };
 const state = reactive(obj);
 
-function fn1() {
-  console.log("fn1");
-  state.a++;
-}
+// eg1: 死循环
+// function fn1() {
+//   console.log("fn1");
+//   // fix: if (effectFn === activeEffect) { // 依赖收集的过程中不触发 continue}
+//   state.a++;
+// }
 
-effect(fn1);
+// effect(fn1);
+
+
+
+
+
+
+
+// eg2: lazy
 
 function fn() {
   console.log("fn");
