@@ -1,6 +1,7 @@
 import { TrackOpTypes, TriggerOpTypes } from "./operations";
 
 const targetMap = new WeakMap();
+
 const ITERATE_KEY = Symbol("iterate"); // 对于for in循环 没有对应的属性
 let activeEffect;
 const effectStack: Function[] = [];
@@ -13,6 +14,9 @@ export function pauseTracking() {
 export function resumeTracking() {
   shouldTrack = true;
 }
+
+// vue实现：targetMap -> propMap -> dep
+// 本实现：targetMap -> propMap -> typeMap -> dep
 
 export function track(target, type, key?) {
   if (!shouldTrack || !activeEffect) {
@@ -40,7 +44,7 @@ export function track(target, type, key?) {
     depSet.add(activeEffect);
     activeEffect.deps.push(depSet);
   }
-  // console.log("targetMap->", targetMap);
+  console.log("targetMap->", key ,targetMap);
   // console.log(activeEffect);
   // if (type === TrackOpTypes.ITERATE) {
   //   console.log("依赖收集", type);
@@ -75,8 +79,24 @@ function getEffectFns(target, type, key) {
   if (!propMap) {
     return;
   }
+  /**
+   * 为什么要建立keys数组?
+function fn3() {
+  state.c;
+  for (const key in state) {
+  }
+}
+effect(fn2)
+state.c = 4;
+
+c: get [fn2]
+iter: iter [fn2]
+当state.c=4的时候属性c和属性iter都应该被读取
+所以获取typeMap的时候不是针对某一个属性拿，而是可能有多个属性
+   */
   const keys = [key];
   if (type === TriggerOpTypes.ADD || type == TriggerOpTypes.DELETE) {
+    // 新增或者删除，对应的属性还要加上ITERATE_KEY
     keys.push(ITERATE_KEY);
   }
   const effectFns = new Set<Function>();
@@ -127,6 +147,7 @@ export function effect(
       cleanup(effectFn);
       return fn(); // 可以保证fn运行期间activeEffect有值
     } finally {
+      // 在finally里面清除effect，防止fn运行期间报错无法清除effect
       effectStack.pop();
       activeEffect = effectStack[effectStack.length - 1]; // 指向栈顶
     }
