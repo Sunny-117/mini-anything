@@ -3,8 +3,5 @@
   "version": "0.0.0",
   "license": "ISC",
   "dependencies": {
-    "commander": "^7.0.0",
-    "cra-template2": "^0.0.0",
-    "react-scripts2": "^0.0.0"
   }
 }

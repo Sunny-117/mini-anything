@@ -38,6 +38,7 @@ function get(target, key, receiver) {
   if (arrayInstrumentations.hasOwnProperty(key) && Array.isArray(target)) {
     return arrayInstrumentations[key];
   }
+  // 反射：直接调用内部方法，不需要经过语法层面的中转
   const res = Reflect.get(target, key, receiver);
   if (isObject(res)) {
     return reactive(res);
@@ -54,7 +55,7 @@ function set(target, key, value, receiver) {
     : TriggerOpTypes.ADD;
   const res = Reflect.set(target, key, value, receiver);
   if (!res) {
-    // 赋值没成功（被冻结的对象）
+    // 赋值没成功（被冻结的对象/只有getter的只读属性）
     return res;
   }
   const newLen = Array.isArray(target) ? target.length : undefined;
@@ -86,7 +87,9 @@ function ownKeys(target) {
 }
 function deleteProperty(target, key) {
   const res = Reflect.deleteProperty(target, key); // 删除成功
+  // TODO: target.hasOwnProperty 不能用in
   if (target.hasOwnProperty(key) && res) {
+    // 原来有，现在没有的属性 && 删除成功 -> 触发更新
     trigger(target, TriggerOpTypes.DELETE, key);
   }
   return res;
