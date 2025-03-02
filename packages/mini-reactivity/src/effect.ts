@@ -44,7 +44,7 @@ export function track(target, type, key?) {
     depSet.add(activeEffect);
     activeEffect.deps.push(depSet);
   }
-  console.log("targetMap->", key ,targetMap);
+  // console.log("targetMap->", key ,targetMap);
   // console.log(activeEffect);
   // if (type === TrackOpTypes.ITERATE) {
   //   console.log("依赖收集", type);

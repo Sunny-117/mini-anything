@@ -3,12 +3,13 @@ import { TrackOpTypes, TriggerOpTypes } from "./operations";
 
 export function computed(getterOrOptions) {
   const { getter, setter } = normalizeGetter(getterOrOptions);
-  let value,
-    dirty = true;
+  // 实现计算属性缓存
+  let value, // 之前的值
+    dirty = true; // 到底有没有变化
   const effectFn = effect(getter, {
     lazy: true,
     scheduler() {
-      dirty = true;
+      dirty = true; // 计算属性是懒执行的，当读value的时候才会执行
       // effectFn() 数据变了，不需要执行，只有用到这个数据的时候才需要执行
       trigger(obj, TriggerOpTypes.SET, "value");
     },
@@ -23,8 +24,8 @@ export function computed(getterOrOptions) {
       return value;
     },
     set value(newValue) {
-        setter(newValue)
-    }
+      setter(newValue);
+    },
   };
   return obj;
 }
