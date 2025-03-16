@@ -1,7 +1,7 @@
-<h1 align="center">Welcome to mini-anything 👋</h1>
+<h1 align="center">Welcome to tiny-anything 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
-  <a href="https://sunny-117.github.io/mini-anything/" target="_blank">
+  <a href="https://sunny-117.github.io/tiny-anything/" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
   <a href="https://opensource.org/licenses/MIT" target="_blank">
@@ -9,9 +9,9 @@
   </a>
 </p>
 
-> 🚀 mini-anything 是一个集合了前端领域的各种迷你版本的库，方便前端学习者学习，探索前端源码。里面的库是原库的超级迷你版本，只包含原库的主流程，不包含边界 case，所以建议仅学习使用，请勿用于生产环境
+> 🚀 tiny-anything 是一个集合了前端领域的各种迷你版本的库，方便前端学习者学习，探索前端源码。里面的库是原库的超级迷你版本，只包含原库的主流程，不包含边界 case，所以建议仅学习使用，请勿用于生产环境
 
-### 🏠 [Homepage](https://github.com/Sunny-117/mini-anything)
+### 🏠 [Homepage](https://github.com/Sunny-117/tiny-anything)
 
 # documentation
 
@@ -320,7 +320,7 @@ https://github.com/Sunny-117/tiny-complier
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Sunny-117/mini-anything/issues). You can also take a look at the [contributing guide](https://github.com/Sunny-117/mini-anything/blob/main/CONTRIBUTING.md).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Sunny-117/tiny-anything/issues). You can also take a look at the [contributing guide](https://github.com/Sunny-117/tiny-anything/blob/main/CONTRIBUTING.md).
 
 ## Show your support
 

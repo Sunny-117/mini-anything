@@ -10,8 +10,8 @@ import { defaultSidebar } from './defaultSidebar'
 
 
 export default defineConfig({
-  base: '/mini-anything/',
-  title: 'mini-anything',
+  base: '/tiny-anything/',
+  title: 'tiny-anything',
   description: '',
   // appearance: false,
   lastUpdated: true,
@@ -21,18 +21,18 @@ export default defineConfig({
     nav: [
       {
         text: 'Playground',
-        link: 'https://mini-anything-play.netlify.app/',
+        link: 'https://tiny-anything-play.netlify.app/',
       },
       ...defaultSidebar,
     ],
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/sunny-117/mini-anything' },
+      { icon: 'github', link: 'https://github.com/sunny-117/tiny-anything' },
     ],
     footer: {
       copyright: 'Copyright © 2022-present sunny-117',
     },
     editLink: {
-      pattern: 'https://github.com/sunny-117/mini-anything',
+      pattern: 'https://github.com/sunny-117/tiny-anything',
       text: 'Edit this page on Gitlab',
     },
     lastUpdatedText: 'Last Updated',

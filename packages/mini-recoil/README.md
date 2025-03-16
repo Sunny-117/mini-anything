@@ -1,6 +1,6 @@
 # 新一代 React 状态管理方案 Recoil 实战与迷你源码实现
 
-> 本文所有源码均在：https://github.com/Sunny-117/mini-anything
+> 本文所有源码均在：https://github.com/Sunny-117/tiny-anything
 
 # Recoil基本概念
 
@@ -1614,7 +1614,7 @@ export const useRecoilState = <T>(
 ```
 
 
-> 本文所有源码均在：https://github.com/Sunny-117/mini-anything
+> 本文所有源码均在：https://github.com/Sunny-117/tiny-anything
 
 # 「❤️ 感谢大家」
 
@@ -1629,7 +1629,7 @@ export const useRecoilState = <T>(
 
 **前端面试手写题库：**[https://github.com/Sunny-117/js-challenges](https://github.com/Sunny-117/js-challenges)
 
-**手写前端库源码教程：**[https://sunny-117.github.io/mini-anything](https://sunny-117.github.io/mini-anything/)
+**手写前端库源码教程：**[https://sunny-117.github.io/tiny-anything](https://sunny-117.github.io/tiny-anything/)
 
 **热门文章**
 

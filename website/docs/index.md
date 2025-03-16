@@ -1,18 +1,18 @@
 ---
 layout: home
 hero:
-  name: mini-anything
+  name: tiny-anything
   text: 迷你前端源码库
   image:
     src: /img.png
-    alt: mini-anything
+    alt: tiny-anything
   actions:
     - theme: brand
       text: 现在开始
       link: ./getting-started
     - theme: alt
       text: View on GitHub
-      link: https://github.com/Sunny-117/mini-anything
+      link: https://github.com/Sunny-117/tiny-anything
 features:
 - title: 🦾 Type Strong
   details: Written in TypeScript
